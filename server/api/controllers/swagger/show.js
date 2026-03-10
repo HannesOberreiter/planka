@@ -21,7 +21,9 @@ module.exports = {
         const content = fs.readFileSync(swaggerPath, 'utf8');
         cachedSpecification = JSON.parse(content);
       } catch (error) {
-        sails.log.warn('swagger.json not found, run "npm run swagger:generate" to create it');
+        sails.log.warn(
+          'swagger.json not found, run "npm run swagger:generate" or "npm run build" to create it',
+        );
         return this.res.notFound();
       }
     }
