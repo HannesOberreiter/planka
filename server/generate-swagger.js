@@ -1,4 +1,5 @@
 const fs = require('fs');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const swaggerJsdoc = require('swagger-jsdoc');
 
 const config = require('./config/swagger');
